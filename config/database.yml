@@ -11,8 +11,8 @@
 development:
   adapter: postgresql
   host: localhost
-  user: Jason 
-  password: 23skidoo 
+  user: Jason
+  password: 23skidoo
   database: sample_app
 
 test:

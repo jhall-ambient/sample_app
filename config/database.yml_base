@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   host: localhost
   user: <username> 
-  password: <password> 
+  password: <password>
   database: sample_app
 
 # Warning: The database defined as "test" will be erased and

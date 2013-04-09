@@ -14,6 +14,7 @@
 # That can be in source control.  Local database.yml's will be
 # used according to the specific environment 
 /config/database.yml
+test_ignore.txt
 
 # Ignore all logfiles and tempfiles.
 /log/*.log

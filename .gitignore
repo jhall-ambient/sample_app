@@ -12,6 +12,7 @@
 
 # Ignore database.yml.  There is a base one checked into github
 /config/database.yml
+test_ignore.txt
 
 # Ignore all logfiles and tempfiles.
 /log/*.log

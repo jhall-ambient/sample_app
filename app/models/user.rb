@@ -11,4 +11,9 @@
 
 class User < ActiveRecord::Base
   attr_accessible :email, :name
+
+  validates :name, presence: true  # Just a method, don't need parens 
+  									#(or curly braces when hash is last arg)
+
+  validates :email, presence: true
 end

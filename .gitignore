@@ -10,7 +10,9 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
-# Ignore database.yml.  There is a base one checked into github
+# Ignore working database.yml.  Checked in an _base version
+# That can be in source control.  Local database.yml's will be
+# used according to the specific environment 
 /config/database.yml
 test_ignore.txt
 

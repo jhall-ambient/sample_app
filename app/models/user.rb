@@ -13,7 +13,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation
   has_secure_password
 
-  before_save { |user| user.email = email.downcase }
+  #before_save { |user| user.email = email.downcase }
+  before_save { email.downcase!}  #does same thing
 
   validates :name, presence: true, length: { maximum: 50 }  # Just a method, don't need parens 
   									#(or curly braces when hash is last arg)

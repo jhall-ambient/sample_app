@@ -103,11 +103,26 @@ describe User do
 
       it { should_not == user_for_invalid_password }
       specify { user_for_invalid_password.should be_false}
+      # authenticate returns false or the object 
     end
 
     describe "with a password that's too short" do
       before { @user.password = @user.password_confirmation = "a" * 5 }
       it { should be_invalid }
+    end
+
+    describe "email address with mixed case save as lower" do
+      let(:mixed_case_email) { "TESTcaps@lowerUPPER.com"}
+
+      it "should be saved as lower" do
+        pp mixed_case_email
+        @user.email = mixed_case_email
+        @user.save
+        pp mixed_case_email
+        @user.reload.email.should == mixed_case_email.downcase
+        #@user.reload.email.should_not == mixed_case_email
+        #pp mixed_case_email
+      end
     end
   end
 end

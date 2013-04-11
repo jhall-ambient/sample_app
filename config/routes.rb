@@ -1,5 +1,6 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
+  #get "users/new"   #No longer needed after adding resources :users.  Adds all RESTful stuff
+  resources :users
 
   root to: 'static_pages#home'
   # The about could have been done like any other route below
